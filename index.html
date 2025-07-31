@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Élite - Tu Mejor Versión Comienza Aquí</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="#" class="logo">Gimnasio Élite</a>
+                <ul>
+                    <li><a href="#about-us">Sobre nosotros</a></li>
+                    <li><a href="#classes">Nuestras clases</a></li>
+                    <li><a href="#trainers">Nuestros entrenadores</a></li>
+                    <li><a href="#contact">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>¡Transforma Tu Cuerpo, Transforma Tu Vida!</h1>
+            <p>Entrena con los mejores y alcanza tus metas de fitness.</p>
+            <a href="#contact" class="btn">¡Únete Hoy!</a>
+        </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>En **Gimnasio Élite**, creemos en el poder de la transformación. Ofrecemos instalaciones de vanguardia, entrenadores expertos y una comunidad que te motivará a superar tus límites. Desde clases grupales energéticas hasta entrenamientos personalizados, tenemos todo lo que necesitas para alcanzar tu mejor versión.</p>
+            <div class="image-gallery">
+                <div class="image-wrapper">
+                    <img src="image/pexels-victorfreitas-703014.jpg" alt="Entrenamiento de fuerza" class="hover-effect">
+                    <div class="overlay">Entrenamiento de Fuerza</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="image/pexels-koolshooters-8534767.jpg" alt="Clase de yoga" class="hover-effect">
+                    <div class="overlay">Clases de Yoga</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="classes" id="classes">
+        <div class="container">
+            <h2>Nuestras Clases</h2>
+            <div class="class-grid">
+                <div class="class-card">
+                    <h3>CrossFit Intenso</h3>
+                    <p>Desarrolla fuerza, resistencia y agilidad con nuestros desafiantes entrenamientos de CrossFit.</p>
+                </div>
+                <div class="class-card">
+                    <h3>Yoga y Pilates</h3>
+                    <p>Mejora tu flexibilidad, equilibrio y bienestar mental con nuestras clases de yoga y pilates.</p>
+                </div>
+                <div class="class-card">
+                    <h3>Zumba Fitness</h3>
+                    <p>Quema calorías bailando al ritmo de la música en nuestras divertidas clases de Zumba.</p>
+                </div>
+                <div class="class-card">
+                    <h3>Spinning Extremo</h3>
+                    <p>Pedalea hacia tus metas con nuestras sesiones de spinning de alta energía.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trainers" id="trainers">
+        <div class="container">
+            <h2>Nuestros Entrenadores</h2>
+            <div class="trainer-grid">
+                <div class="trainer-card">
+                    <img src="image/pexels-pixabay-414029.jpg" alt="Entrenador Juan Pérez" class="hover-effect">
+                    <h3>Juan Pérez</h3>
+                    <p>Especialista en entrenamiento de fuerza y acondicionamiento.</p>
+                </div>
+                <div class="trainer-card">
+                    <img src="image/pexels-olly-864939.jpg" alt="Entrenadora María García" class="hover-effect">
+                    <h3>María García</h3>
+                    <p>Experta en yoga, pilates y bienestar integral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¡Estamos listos para ayudarte a alcanzar tus metas!</p>
+            <div class="contact-content">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                <div class="contact-info-sidebar">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Av.La República, Huaquillas, Ecuador</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+593959144726">+593 95 914 4726</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@gimnasioelite.com">info@gimnasioelite.com</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Gimnasio Élite</h3>
+                    <p>&copy; 2025 Gimnasio Élite. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Av.La República, Huaquillas, Ecuador</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+593959144726">+593 95 914 4726</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@gimnasioelite.com">info@gimnasioelite.com</a></p>
+                </div>
+                <div class="footer-section social">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/593959144726?text=Hola,%20me%20interesa%20obtener%20más%20información%20sobre%20Gimnasio%20Élite." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

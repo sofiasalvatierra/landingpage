@@ -1,0 +1,674 @@
+/* Variables para colores vibrantes y profesionales */
+:root {
+    --primary-color: #FF4B2B; /* Naranja rojizo vibrante */
+    --secondary-color: #333333; /* Gris oscuro para contraste */
+    --accent-color: #00BCD4; /* Turquesa brillante como acento */
+    --text-light: #F0F0F0; /* Texto claro para fondos oscuros */
+    --text-dark: #333333; /* Texto oscuro para fondos claros */
+    --bg-light: #FFFFFF; /* Fondo blanco */
+    --bg-dark: #222222; /* Fondo gris oscuro */
+    --gradient-start: #FF4B2B;
+    --gradient-end: #FF416C;
+}
+
+/* Fuentes importadas de Google Fonts */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Global Elements --- */
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+    font-size: 2.8em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: var(--text-light);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
+}
+
+/* --- Header & Navigation Bar --- */
+.main-header {
+    background-color: var(--secondary-color); /* Fondo oscuro para la barra de navegación */
+    padding: 15px 0;
+    position: sticky; /* Hace que la barra de navegación se quede pegada al hacer scroll */
+    top: 0;
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.main-nav .logo {
+    color: var(--primary-color);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos de la lista */
+}
+
+.main-nav ul li {
+    margin-left: 30px; /* Espacio entre los elementos del menú */
+}
+
+.main-nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto del enlace se rompa en varias líneas */
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+/* --- Hero Section (Existing styles remain) --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/pexels-goumbik-669584.jpg') no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Make hero section take up most of the viewport height */
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* --- About Us Section --- */
+.about-us {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../image/pexels-victorfreitas-949131.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.about-us h2, .about-us p {
+    position: relative;
+    z-index: 2;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 380px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 75, 43, 0.7);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+
+/* --- Classes Section --- */
+.classes {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.classes h2 {
+    color: var(--text-light);
+}
+
+.classes h2::after {
+    background-color: var(--accent-color);
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.class-card {
+    background-color: #383838;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.class-card h3 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.class-card p {
+    color: var(--text-light);
+    font-size: 1em;
+}
+
+.class-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--primary-color);
+}
+
+.class-card:hover h3 {
+    color: var(--text-light);
+}
+
+/* --- Trainers Section --- */
+.trainers {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.trainer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.trainer-card {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 320px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.trainer-card h3 {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.trainer-card p {
+    color: var(--secondary-color);
+    padding: 0 20px 25px;
+    font-size: 1.1em;
+}
+
+/* Hover effect specific to trainer images */
+.trainer-card img.hover-effect:hover {
+    transform: scale(1.03);
+    filter: brightness(0.8);
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* --- Contact Section (New Styles for Form and Info Sidebar) --- */
+.contact-section {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--secondary-color);
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 2; /* Take more space */
+    min-width: 300px;
+    max-width: 700px;
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Contact Info Sidebar */
+.contact-info-sidebar {
+    flex: 1; /* Take less space than form */
+    min-width: 280px;
+    max-width: 400px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+}
+
+.contact-info-sidebar h3 {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.contact-info-sidebar p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.contact-info-sidebar p i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.contact-info-sidebar p a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-sidebar p a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    color: var(--text-light);
+}
+
+.footer-section p i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.footer-section a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.8em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- WhatsApp Button --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #1DA851;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    /* Ajustes para la barra de navegación */
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-nav .logo {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .hero {
+        padding: 100px 20px;
+        min-height: 60vh;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+    .image-gallery, .trainer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-wrapper, .trainer-card {
+        width: 90%;
+        max-width: 400px;
+    }
+    .class-grid {
+        grid-template-columns: 1fr;
+    }
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Contact Section Responsive */
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .contact-form, .contact-info-sidebar {
+        width: 90%;
+        max-width: 500px;
+    }
+    .contact-info-sidebar h3, .social-icons {
+        text-align: center; /* Center these in mobile view */
+        justify-content: center; /* Center icons */
+    }
+
+    /* Ajustes para el footer responsivo */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .footer-section h3 {
+        text-align: center;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .hero {
+        padding: 80px 15px;
+    }
+}
